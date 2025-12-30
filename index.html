@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conversor de Moedas</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <main class="app">
+    <h1>Conversor de Moedas</h1>
+
+    <section class="card">
+      <label class="label">Valor</label>
+      <input id="valor" class="input" type="number" step="0.01" placeholder="Ex: 100,00">
+
+      <div class="row">
+        <div class="col">
+          <label class="label">De</label>
+          <select id="de" class="select">
+            <option value="BRL">Real (BRL)</option>
+            <option value="USD">Dólar (USD)</option>
+            <option value="EUR">Euro (EUR)</option>
+          </select>
+        </div>
+
+        <div class="col">
+          <label class="label">Para</label>
+          <select id="para" class="select">
+            <option value="USD">Dólar (USD)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="BRL">Real (BRL)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="rates">
+        <p><b>Taxas fixas (exemplo):</b></p>
+        <p>1 USD = 5,00 BRL</p>
+        <p>1 EUR = 5,50 BRL</p>
+      </div>
+
+      <div class="actions">
+        <button id="converter" class="btn">Converter</button>
+        <button id="limpar" class="btn btn-soft">Limpar</button>
+      </div>
+
+      <div class="result">
+        <p class="result-label">Resultado</p>
+        <p id="resultado" class="result-value">—</p>
+      </div>
+
+      <p class="hint">Dica: digite o valor e clique em Converter.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
